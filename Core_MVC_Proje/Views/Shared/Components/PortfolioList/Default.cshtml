@@ -5,6 +5,10 @@
 		<div class="text-center mb-5">
 			<h2 class="marker marker-center">Projelerim </h2>
 		</div>
+		<p class="mx-auto mb-3" style="max-width:600px">
+			Github üstünde yapmış olduğum projeler aşağıda bulunmaktadır.
+			İsterseniz fotoğraf altındaki linke tıklayarak proje detaylarına bakabilirsiniz.
+		</p>
 		<div class="grid bp-gallery pb-3" data-aos="zoom-in-up" data-aos-delay="100">
 			<div class="grid-sizer"></div>
 			@foreach (var item in Model)
@@ -15,7 +19,7 @@
 							<img src="@item.ImageUrl" data-bp="@item.ImageUrl2" />
 							<figcaption>
 								<h4 class="h5 mb-0">@item.Name</h4>
-								<div>@item.ProjectUrl</div>
+								<div href="@item.ProjectUrl">@item.ProjectUrl</div>
 							</figcaption>
 						</figure>
 					</a>
