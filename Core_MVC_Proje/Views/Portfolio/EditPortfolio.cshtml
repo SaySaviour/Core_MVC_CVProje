@@ -3,12 +3,12 @@
     ViewData["Title"] = "AddPortfolio";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
 <div class="card-header border-0">
-    <h3 class="mb-0">Deneyim Ekleme</h3>
+    <h3 class="mb-0">Proje Güncelleme</h3>
 </div>
-@using (Html.BeginForm("AddPortfolio", "Portfolio", FormMethod.Post))
+@using (Html.BeginForm("EditPortfolio", "Portfolio", FormMethod.Post))
 {
+    @Html.HiddenFor(x=>x.PortfolioID)
     @Html.Label("Proje Başlığı")
     @Html.TextAreaFor(x=>x.Name, new{@class ="form-control"})
     @Html.ValidationMessageFor(x=>x.Name)
@@ -29,11 +29,9 @@
     @Html.TextAreaFor(x=>x.Value, new{@class ="form-control"})
     @Html.ValidationMessageFor(x=>x.Value)
     <br />
-    <label>Platform</label>
+        <label>Platform</label>
     @Html.TextAreaFor(x=>x.Platform, new{@class ="form-control"})
     @Html.ValidationMessageFor(x=>x.Platform)
-    <br />
-    <button class="btn btn-primary">Proje Kaydet</button>
+        <br />
+    <button class="btn btn-success">Güncelle</button>
 }
-
-
