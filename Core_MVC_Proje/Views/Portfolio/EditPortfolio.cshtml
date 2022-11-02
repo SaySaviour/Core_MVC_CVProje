@@ -5,7 +5,7 @@
 }
 <div class="card-header border-0">
     <h3 class="mb-0">Proje Güncelleme</h3>
-</div>
+
 @using (Html.BeginForm("EditPortfolio", "Portfolio", FormMethod.Post))
 {
     @Html.HiddenFor(x=>x.PortfolioID)
@@ -35,3 +35,4 @@
         <br />
     <button class="btn btn-success">Güncelle</button>
 }
+</div>
