@@ -4,7 +4,7 @@ namespace Core_MVC_Proje.Areas.Writer.Controllers
 {
     public class DefaultController : Controller
     {
-        [Area("Writer")]
+        [Area("User")]
         public IActionResult Index()
         {
             return View();
